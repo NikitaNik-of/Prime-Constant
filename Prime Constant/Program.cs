@@ -62,5 +62,19 @@ namespace Prime_Constant
             constant.Clear();
             Console.ReadKey();
         }
+        static void Main(string[] args)
+        {
+            char a = ' ';
+            while (a != 'q')
+            {
+                a = ' ';
+                Console.WriteLine("Меню: \n1 = Вывод константы \n2 = Вывод простых чисел с помощью константы\n \nq = Выход");
+                Console.Write(">>> ");
+                a = Convert.ToChar(Console.ReadLine());
+                if (a == '1') CalculationConst();
+                else if (a == '2') CalculationPrimes();
+                Console.Clear();
+            }
+        }
     }
 }
