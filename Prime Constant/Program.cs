@@ -47,10 +47,10 @@ namespace Prime_Constant
                 i++;
             }
             Console.WriteLine("\nC = {0}", C);
-            Console.ReadKey();
         }
         static void CalculationPrimes()
         {
+            if (C == 0) CalculationConst();
             int i = 10;
             Console.Write("\nСколько нужно вычислить простых чисел? >>> ");
             i = Convert.ToInt32(Console.ReadLine());
@@ -60,7 +60,6 @@ namespace Prime_Constant
                 Console.WriteLine("Число P{0}: {1}, Новая константа C{0}: {2}", j, Math.Floor(g), g);
             }
             constant.Clear();
-            Console.ReadKey();
         }
         static void Main(string[] args)
         {
@@ -73,6 +72,7 @@ namespace Prime_Constant
                 a = Convert.ToChar(Console.ReadLine());
                 if (a == '1') CalculationConst();
                 else if (a == '2') CalculationPrimes();
+                Console.ReadKey();
                 Console.Clear();
             }
         }
