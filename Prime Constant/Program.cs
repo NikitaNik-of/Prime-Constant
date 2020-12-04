@@ -33,8 +33,22 @@ namespace Prime_Constant
             else if (i < constant.Count) g = constant[i--];
             else
             {
-                g = Math.Floor(G(i - 1)) * (G(i - 1) - Math.Floor(G(i - 1)) + 1);
+                g = Math.Floor(G1(i - 1)) * (G1(i - 1) - Math.Floor(G1(i - 1)) + 1);
                 constant.Add(g);
+            }
+            return g;
+        }
+        static decimal G1(int i)
+        {
+            decimal g;
+            if (i == 1)
+            {
+                g = C;
+            }
+            else if (i < constant.Count) g = constant[i--];
+            else
+            {
+                g = Math.Floor(G1(i - 1)) * (G1(i - 1) - Math.Floor(G1(i - 1)) + 1);
             }
             return g;
         }
